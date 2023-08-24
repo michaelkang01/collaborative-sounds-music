@@ -1,0 +1,123 @@
+@use "../../../../styles/globals.scss" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(33, 70px);
+  grid-template-rows: repeat(50, 25px);
+
+  padding-right: 17px;
+  box-sizing: content-box;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+.container::-webkit-scrollbar {
+  background-color: $background-color;
+  height: 7px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: $highlight-color-2;
+  border-radius: $big-border-radius;
+}
+
+.container2 {
+  overflow: hidden;
+  max-width: 75vw;
+  max-height: 75vh;
+  height: 100%;
+  width: 100%;
+}
+
+.selectedCell {
+  background-color: $highlight-color-2 !important;
+}
+
+.cell {
+  border: 0.5px solid #374143;
+  color: $text-color;
+  cursor: pointer;
+  font-size: 0.8rem;
+  height: 25px;
+  text-align: center;
+  width: 100%;
+  font-family: $main-font;
+  font-size: 0.8rem;
+  background-color: $background-color;
+}
+
+.note {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0.2px solid $background-color;
+}
+
+.gridContainer {
+  grid-column-start: 2;
+  grid-column-end: 33;
+  grid-row-start: 2;
+  grid-row-end: 51;
+  :first-child {
+    background-color: #121616;
+  }
+  :nth-child(4n + 5) {
+    background-color: #252c2d;
+  }
+  :nth-child(16n + 17) {
+    background-color: #121616;
+  }
+}
+
+.barNumberLabels {
+  grid-column-start: 1;
+  grid-column-end: 34;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: table-row;
+  font-family: $main-font;
+  font-size: 0.9rem;
+  color: $text-color;
+}
+
+.noteLabels {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 51;
+  font-family: $main-font;
+  font-size: 0.7rem;
+  background-color: $text-color;
+
+  :nth-child(12n + 2) {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+  :nth-child(12n + 4) {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+  :nth-child(12n + 7) {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+  :nth-child(12n + 9) {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+  :nth-child(12n + 11) {
+    background-color: $background-color !important;
+    color: $text-color;
+  }
+}
+
+.header {
+  text-align: center;
+  display: table-cell;
+  width: 70px;
+}
+
+.highlight {
+  background-color: $highlight-color-2;
+}

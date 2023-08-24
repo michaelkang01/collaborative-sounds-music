@@ -1,0 +1,54 @@
+@use "../../../../styles/globals.scss" as *;
+
+.instrumentContainer {
+  padding: 5px 15px 15px 15px;
+  border: $border;
+  background-color: $background-color;
+  border-radius: $big-border-radius;
+  margin: 5px 6px;
+}
+
+.selectedInstrument {
+  border: $border-highlight;
+}
+
+.partsAwarenessContainer {
+  display: flex;
+}
+
+.partAwareness {
+  height: 7px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+.partIdContainer {
+  font-family: $main-font;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+
+  .partId {
+    flex-grow: 1;
+    color: $text-color;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.volumeSlider {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.dropdown {
+  margin: 8px 0;
+}

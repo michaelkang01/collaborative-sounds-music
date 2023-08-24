@@ -1,0 +1,25 @@
+@use "../../../../styles/globals.scss" as *;
+
+.shareButton {
+  background-color: $layer-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $border;
+  border-radius: $big-border-radius;
+  width: 100px;
+  margin-left: 15px;
+  padding: 10px;
+
+  &:hover {
+    background-color: $highlight-color-2;
+    border: $border-highlight;
+    cursor: pointer;
+  }
+
+  span {
+    color: $text-color;
+    font-family: $main-font;
+    margin-left: 10px;
+  }
+}

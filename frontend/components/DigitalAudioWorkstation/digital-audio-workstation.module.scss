@@ -1,0 +1,56 @@
+@use "../../styles/globals.scss" as *;
+
+.instrumentList {
+  grid-area: instrumentList;
+  overflow: hidden;
+  height: 95%;
+  margin-left: 15px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  background-color: $layer-color;
+  border-radius: $big-border-radius;
+
+  .hiddenScroll {
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    padding-right: 17px;
+    padding-left: 7px;
+    box-sizing: content-box;
+  }
+}
+.instrumentNotes {
+  grid-area: instrumentNotes;
+  padding: 20px;
+  background-color: $layer-color;
+  border-radius: $big-border-radius;
+  margin: 25px 15px 10px 15px;
+  max-width: 75vw;
+}
+
+.controller {
+  grid-area: controller;
+}
+
+.userPresence {
+  grid-area: userPresence;
+}
+
+.collaboration {
+  grid-area: collaboration;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 220px auto;
+  grid-template-rows: 30px 80vh 100px;
+  grid-template-areas:
+    "collaboration userPresence"
+    "instrumentList instrumentNotes"
+    "controller controller";
+  background-color: $background-color;
+}

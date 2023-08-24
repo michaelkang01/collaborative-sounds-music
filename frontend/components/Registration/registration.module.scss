@@ -1,0 +1,42 @@
+@use "../../styles/globals.scss" as *;
+
+.registration-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+  }
+  button {
+    height: 40px;
+    width: 50%;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: $highlight-color;
+  }
+  label {
+    input {
+      height: auto;
+      margin-right: 15px;
+    }
+    font-size: small;
+  }
+}
+
+.error-msg {
+  color: red;
+}
